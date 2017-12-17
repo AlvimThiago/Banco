@@ -1,4 +1,4 @@
-package br.com.caelum.contas;
+ package br.com.caelum.contas;
 
 import br.com.caelum.contas.modelo.Cliente;
 import br.com.caelum.contas.modelo.Conta;
