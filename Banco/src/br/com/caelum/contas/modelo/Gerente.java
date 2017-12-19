@@ -15,22 +15,31 @@ public class Gerente extends Funcionario {
 		}
 	}
 
-	public void setNumeroDeFuncionariosGerenciados(int numeroDeFuncionariosGerenciados) {
+	public void setNumeroDeFuncionariosGerenciados(
+			int numeroDeFuncionariosGerenciados) {
 		this.numeroDeFuncionariosGerenciados = numeroDeFuncionariosGerenciados;
 	}
 
-	private void addFuncionarios() {
-		this.numeroDeFuncionariosGerenciados++;
+	public int addFuncionarios() {
+
+		return ++this.numeroDeFuncionariosGerenciados;
+
+	}
+
+	public int addFuncionarios(int f) {
+
+		return this.numeroDeFuncionariosGerenciados += f;
 
 	}
 
 	public void setSenha(int senha) {
+		
 		this.senha = senha;
 
 	}
 
 	@Override
-	public double getBonificação() {
+	public double getBonificacao() {
 
 		return this.salario * 0.15;
 	}
