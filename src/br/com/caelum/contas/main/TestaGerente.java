@@ -15,16 +15,16 @@ public class TestaGerente {
 		g.setNome("Thiago Alvim");
 		g.setSenha(123456);
 		g.setSalario(100.0);
-		System.out.println("Bonificação do gerente: " + g.getBonificacao());	
-		System.out.println("Bonificação do funcionario: " + f.getBonificacao());
+		System.out.println("Bonificacao do gerente: " + g.getBonificacao());	
+		System.out.println("Bonificacao do funcionario: " + f.getBonificacao());
 		System.out.println("Funcionarios gerenciados: " + g.addFuncionarios());
 		System.out.println("Funcionarios gerenciados: " + g.addFuncionarios(5));
 		Funcionario k = new Gerente();
 		k.setSalario(1000);
-		System.out.println("Bonificação do k: " + k.getBonificacao());
+		System.out.println("Bonificacao do k: " + k.getBonificacao());
 		cb.registra(f);
 		cb.registra(g);
-		System.out.println("Total de bonificações: " + cb.getTotalDeBonificacoes());
+		System.out.println("Total de bonificacoes: " + cb.getTotalDeBonificacoes());
 		
 	}
 
