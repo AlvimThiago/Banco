@@ -6,7 +6,7 @@ public class TestaContas {
 
 	public static void main(String[] args) {
 	
-		SistemaBancario.mostraTela(false);
+		SistemaBancario.mostraTela(true);
 		
 	}
 
