@@ -8,7 +8,7 @@ public class TestaGerente {
 
 	public static void main(String[] args) {
 		
-		Funcionario f = new Funcionario();
+		Funcionario f = new Gerente();
 		f.setSalario(100.0);
 		ControleDeBonificacoes cb = new ControleDeBonificacoes();
 		Gerente g = new Gerente();

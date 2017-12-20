@@ -1,6 +1,6 @@
 package br.com.caelum.contas.modelo;
 
-public class Conta {
+public abstract class Conta {
 
 	private int numero;
 	protected double saldo;
@@ -14,11 +14,7 @@ public class Conta {
 		conta.depositar(valor);
 	}
 	
-	public String getTipo() {
-
-		return "Conta";
-
-	}
+	public abstract String getTipo();
 
 	public void sacar(double valor) {
 		if (saldo >= valor) {

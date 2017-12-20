@@ -3,5 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="fj11-lib-contas.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/alvim/eclipse-workspace/Banco/fj11-lib-contas.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

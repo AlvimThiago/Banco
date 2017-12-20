@@ -19,7 +19,7 @@ public class ManipuladorDeContas {
 		if (tipo.equals("Conta Corrente")) {
 			this.conta = new ContaCorrente();
 		} else {
-			if (tipo.equals("Conta PoupanÃ§a")) {
+			if (tipo.equals("Conta Poupança")) {
 				this.conta = new ContaPoupanca();
 			}
 		}
