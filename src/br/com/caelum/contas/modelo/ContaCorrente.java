@@ -4,7 +4,7 @@ public class ContaCorrente extends Conta {
 
 	public String getTipo() {
 
-		return super.getTipo() + " Corrente";
+		return "Conta Corrente";
 
 	}
 	
