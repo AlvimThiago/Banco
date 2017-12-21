@@ -10,15 +10,20 @@ public class ContaCorrente extends Conta implements Tributavel {
 	
 	@Override
 	public void sacar(double valor) {
-		if (saldo >= valor) {
-			this.saldo -= (valor + 0.10);
-			System.out.println("Saldo atual: " + saldo);
-		} else {
-			System.out.println("Saldo insuficiente.");
 
+		if (valor < 0) {
+			throw new IllegalArgumentException("Voce tentou sacar"
+					+ " um valor negativo");
+		} else {
+
+			if (this.saldo >= valor) {
+				this.saldo = this.saldo - valor + 0.1;
+				System.out.println("Saldo atual: " + saldo);
+			} else {
+				throw new SaldoInsuficienteException(valor);
+
+			}
 		}
-		
-		
 	}
 
 	@Override

@@ -9,27 +9,40 @@ public abstract class Conta {
 	private Data dataDeAbertura;
 	private static int contador;
 
-	public void transfere(double valor, Conta conta){
+	public void transfere(double valor, Conta conta) {
 		this.sacar(valor);
 		conta.depositar(valor);
 	}
-	
+
 	public abstract String getTipo();
 
 	public void sacar(double valor) {
-		if (saldo >= valor) {
-			saldo = saldo - valor;
-			System.out.println("Saldo atual: " + saldo);
-		} else {
-			System.out.println("Saldo insuficiente.");
 
+		if (valor < 0) {
+			throw new IllegalArgumentException("Voce tentou sacar"
+					+ " um valor negativo");
+		} else {
+
+			if (saldo >= valor) {
+				saldo = saldo - valor;
+				System.out.println("Saldo atual: " + saldo);
+			} else {
+				System.out.println("Saldo insuficiente.");
+
+			}
 		}
 	}
 
 	public void depositar(double valor) {
 
-		saldo = saldo + valor;
-		System.out.println("Saldo atual: " + saldo);
+		if (valor < 0) {
+			throw new IllegalArgumentException("Voce tentou depositar"
+					+ " um valor negativo");
+		} else {
+
+			this.saldo += valor;
+			System.out.println("Saldo atual: " + saldo);
+		}
 	}
 
 	public void setNome(String nome) {
