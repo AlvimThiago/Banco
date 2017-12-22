@@ -9,10 +9,14 @@ public class Teste {
 
 	public static void main(String[] args) {
 		Cliente cli = new Cliente();
+		Cliente cli2 = new Cliente();
 		Conta c = new ContaCorrente();
+		Conta c2 = new ContaCorrente();
 		Data data = new Data(24, 01, 1992);
+		c2.setTitular(cli2);
 		c.data(data);
 		c.setAgencia("45678-9");
+		c2.setAgencia("45678-9");
 		cli.nome = "Thiago";
 		c.setTitular(cli);
 		cli.rg = "132546";
@@ -22,12 +26,14 @@ public class Teste {
 		// data.ano = 2015;
 		System.out.println("Saldo atual: " + c.getSaldo());
 		c.depositar(400);
-		c.sacar(600);
+//		c.sacar(600);
 		double rendimento = c.getRendimento();
 		System.out.println("O rendimento foi de: " + rendimento);
 		System.out.println(c.getDados());
 		Conta.getContador();
-		c.sacar(-3);
+		c.sacar(3);
+		System.out.println(c.toString());
+		System.out.println(c.equals(c2));
 
 	}
 

@@ -9,6 +9,28 @@ public abstract class Conta {
 	private Data dataDeAbertura;
 	private static int contador;
 
+	@Override
+	public String toString() {
+
+		return "[titular: " + titular.nome + ", numero: " + this.numero
+				+ ", agencia= " + this.agencia + "]";
+
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+
+		if (obj == null) {
+			return false;
+		}
+
+		Conta outraConta = (Conta) obj;
+
+		return this.numero == outraConta.numero
+				&& this.agencia.equals(outraConta.agencia);
+
+	}
+
 	public void transfere(double valor, Conta conta) {
 		this.sacar(valor);
 		conta.depositar(valor);
