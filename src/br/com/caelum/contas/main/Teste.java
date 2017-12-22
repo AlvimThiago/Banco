@@ -26,7 +26,7 @@ public class Teste {
 		// data.ano = 2015;
 		System.out.println("Saldo atual: " + c.getSaldo());
 		c.depositar(400);
-//		c.sacar(600);
+		// c.sacar(600);
 		double rendimento = c.getRendimento();
 		System.out.println("O rendimento foi de: " + rendimento);
 		System.out.println(c.getDados());
