@@ -29,7 +29,7 @@ public class TesteErro {
 				cc.depositar(i + 1000);
 				System.out.println(cc.getSaldo());
 				if (i == 5) {
-					cc = null;
+					//cc = null;
 				}
 			}
 		} catch (NullPointerException e) {

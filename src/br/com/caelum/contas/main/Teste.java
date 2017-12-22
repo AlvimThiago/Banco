@@ -34,6 +34,7 @@ public class Teste {
 		c.sacar(3);
 		System.out.println(c.toString());
 		System.out.println(c.equals(c2));
+		System.out.println(c2.toString());
 
 	}
 

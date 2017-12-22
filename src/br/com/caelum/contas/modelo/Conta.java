@@ -1,6 +1,6 @@
 package br.com.caelum.contas.modelo;
 
-public abstract class Conta {
+public abstract class Conta implements Comparable<Conta> {
 
 	private int numero;
 	protected double saldo;
@@ -10,13 +10,25 @@ public abstract class Conta {
 	private static int contador;
 
 	@Override
+	public int compareTo(Conta o) {
+		return this.titular.nome.compareTo(o.titular.nome);
+	}
+	
+	@Override
 	public String toString() {
+		
+		String s = "[titular: " + titular.nome + ", numero: " + this.numero
+				+ ", agencia= " + this.agencia + "]"; 
+		s = s.toUpperCase();
+				
+				
 
-		return "[titular: " + titular.nome + ", numero: " + this.numero
-				+ ", agencia= " + this.agencia + "]";
+		return s;
 
 	}
 
+	
+	
 	@Override
 	public boolean equals(Object obj) {
 
@@ -69,6 +81,12 @@ public abstract class Conta {
 
 	public void setNome(String nome) {
 		this.titular.nome = nome;
+
+	}
+	
+	public String getNome() {
+		
+		return titular.nome;
 
 	}
 
@@ -155,5 +173,8 @@ public abstract class Conta {
 	public String getTitular() {
 		return this.titular.nome;
 	}
+	
+	
+	
 
 }

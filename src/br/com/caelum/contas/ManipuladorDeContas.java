@@ -1,5 +1,8 @@
 package br.com.caelum.contas;
 
+import java.util.Collections;
+import java.util.List;
+
 import br.com.caelum.contas.modelo.Cliente;
 import br.com.caelum.contas.modelo.Conta;
 import br.com.caelum.contas.modelo.ContaCorrente;
@@ -9,6 +12,13 @@ import br.com.caelum.javafx.api.util.Evento;
 public class ManipuladorDeContas {
 	private Conta conta;
 
+	private void ordenaLista(Evento e) {
+		
+		List<Conta> contas = e.getLista("destino");
+		Collections.sort(contas);
+
+	}
+	
 	public void transfere(Evento e){
 		Conta destino = (Conta) e.getSelecionadoNoCombo("destino");
 		conta.transfere(e.getDouble("valorTransferencia"), destino);
@@ -19,7 +29,7 @@ public class ManipuladorDeContas {
 		if (tipo.equals("Conta Corrente")) {
 			this.conta = new ContaCorrente();
 		} else {
-			if (tipo.equals("Conta Poupança")) {
+			if (tipo.equals("Conta PoupanÃ§a")) {
 				this.conta = new ContaPoupanca();
 			}
 		}
